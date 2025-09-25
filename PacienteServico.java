@@ -1,23 +1,33 @@
-package modelo;
+package servico;
+
+import modelo.Paciente;
+import repositorio.PacienteRepositorio;
+import java.util.List;
 
 public class PacienteServico {
     private static PacienteServico instancia;
+    private PacienteRepositorio repo;
 
-    private PacienteServico() {
+    private PacienteServico(PacienteRepositorio repo) { 
+        this.repo = repo; 
     }
 
-    public static PacienteServico getInstancia() {
+    public static PacienteServico getInstancia(PacienteRepositorio repo) {
         if (instancia == null) {
-            instancia = new PacienteServico();
+            instancia = new PacienteServico(repo);
         }
         return instancia;
     }
 
-    public void cadastrarPaciente(Paciente paciente) {
-        System.out.println("Paciente cadastrado: " + paciente.getNome());
+    public void registrarPaciente(Paciente paciente) { 
+        repo.salvar(paciente); 
     }
 
-    public void listarPacientes() {
-        System.out.println("Listando pacientes...");
+    public Paciente obterPaciente(String id) { 
+        return repo.buscarPorId(id); 
+    }
+
+    public List<Paciente> obterTodosPacientes() { 
+        return repo.buscarTodos(); 
     }
 }
