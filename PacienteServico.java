@@ -1,13 +1,23 @@
-package servico;
-
-import modelo.Paciente;
-import repositorio.PacienteRepositorio;
-import java.util.List;
+package modelo;
 
 public class PacienteServico {
-    private PacienteRepositorio repo;
-    public PacienteServico(PacienteRepositorio repo) { this.repo = repo; }
-    public void registrarPaciente(Paciente paciente) { repo.salvar(paciente); }
-    public Paciente obterPaciente(String id) { return repo.buscarPorId(id); }
-    public List<Paciente> obterTodosPacientes() { return repo.buscarTodos(); }
+    private static PacienteServico instancia;
+
+    private PacienteServico() {
+    }
+
+    public static PacienteServico getInstancia() {
+        if (instancia == null) {
+            instancia = new PacienteServico();
+        }
+        return instancia;
+    }
+
+    public void cadastrarPaciente(Paciente paciente) {
+        System.out.println("Paciente cadastrado: " + paciente.getNome());
+    }
+
+    public void listarPacientes() {
+        System.out.println("Listando pacientes...");
+    }
 }
