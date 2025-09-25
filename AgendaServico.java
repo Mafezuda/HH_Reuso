@@ -1,6 +1,6 @@
-package servico;
+package modelo.servico;
 
-import modelo.Consulta;
+import modelo.modelo.Consulta;
 import java.util.*;
 
 public class AgendaServico {

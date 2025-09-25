@@ -1,4 +1,4 @@
-package template;
+package modelo.template;
 
 public abstract class TemplateGerenciamento {
     public final void executarProcesso(String usuario, String dado) {

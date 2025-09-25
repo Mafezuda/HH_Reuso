@@ -1,4 +1,4 @@
-package template;
+package modelo.template;
 
 public class CadastroUsuario extends TemplateGerenciamento {
     @Override
@@ -14,6 +14,5 @@ public class CadastroUsuario extends TemplateGerenciamento {
     @Override
     protected void processar(String usuario, String dado) {
         System.out.println("Cadastrando usuário: " + usuario + " com senha: " + dado);
-        // Aqui entraria a lógica de persistência
     }
 }

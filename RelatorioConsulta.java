@@ -1,6 +1,9 @@
-package relatorio;
+package modelo.relatorio;
 
-import modelo.Consulta;
+import modelo.estrategia.EstrategiaExportacao;
+import modelo.modelo.Consulta;
+import modelo.template.TemplateRelatorio;
+
 import java.util.List;
 
 public class RelatorioConsulta extends TemplateRelatorio {

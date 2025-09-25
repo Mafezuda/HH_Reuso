@@ -1,4 +1,4 @@
-package relatorio;
+package modelo.estrategia;
 
 public class ExportacaoPDF implements EstrategiaExportacao {
     @Override

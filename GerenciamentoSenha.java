@@ -1,4 +1,4 @@
-package template;
+package modelo.template;
 
 public class GerenciamentoSenha extends TemplateGerenciamento {
     @Override

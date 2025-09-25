@@ -1,10 +1,26 @@
-package repositorio;
+package modelo.repositorio;
 
-import modelo.Paciente;
+import modelo.modelo.Paciente;
+import java.util.ArrayList;
 import java.util.List;
 
-public interface PacienteRepositorio {
-    void salvar(Paciente paciente);
-    Paciente buscarPorId(String id);
-    List<Paciente> buscarTodos();
+public class PacienteRepositorio {
+    private List<Paciente> pacientes = new ArrayList<>();
+
+    public void salvar(Paciente paciente) {
+        pacientes.add(paciente);
+    }
+
+    public Paciente buscarPorId(String id) {
+        for (Paciente p : pacientes) {
+            if (p.getId().equals(id)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public List<Paciente> buscarTodos() {
+        return new ArrayList<>(pacientes);
+    }
 }

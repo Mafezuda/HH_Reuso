@@ -1,4 +1,4 @@
-package estrategia;
+package modelo.estrategia;
 
 public class NotificacaoSMS implements EstrategiaNotificacao {
     @Override

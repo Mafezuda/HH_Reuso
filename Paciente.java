@@ -1,4 +1,4 @@
-package modelo;
+package modelo.modelo;
 
 public class Paciente {
     private String id;

@@ -1,4 +1,6 @@
-package relatorio;
+package modelo.template;
+
+import modelo.estrategia.EstrategiaExportacao;
 
 public abstract class TemplateRelatorio {
     protected EstrategiaExportacao estrategiaExportacao;

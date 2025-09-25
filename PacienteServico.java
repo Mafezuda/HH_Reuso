@@ -1,7 +1,7 @@
-package servico;
+package modelo.servico;
 
-import modelo.Paciente;
-import repositorio.PacienteRepositorio;
+import modelo.modelo.Paciente;
+import modelo.repositorio.PacienteRepositorio;
 import java.util.List;
 
 public class PacienteServico {
